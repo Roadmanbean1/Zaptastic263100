@@ -1,0 +1,63 @@
+[
+	{
+		"name": "enemy1",
+		"shields": 1,
+		"speed": 100,
+		"powerUpChance": 10,
+	},
+	{
+		"name": "enemy2",
+		"shields": 1,
+		"speed": 100,
+		"powerUpChance": 5,
+	},
+	{
+		"name": "enemy3",
+		"shields": 1,
+		"speed": 100,
+		"powerUpChance": 2,
+	},
+    {
+        "name": "enemy4",
+        "shields": 1,
+        "speed": 100,
+        "powerUpChance": 2,
+    },
+    {
+        "name": "enemy5",
+        "shields": 1,
+        "speed": 100,
+        "powerUpChance": 2,
+    },
+    {
+        "name": "enemy6",
+        "shields": 1,
+        "speed": 100,
+        "powerUpChance": 2,
+    },
+    {
+        "name": "enemy7",
+        "shields": 1,
+        "speed": 100,
+        "powerUpChance": 2,
+    },
+    {
+        "name": "enemy8",
+        "shields": 1,
+        "speed": 100,
+        "powerUpChance": 2,
+    },
+    {
+        "name": "enemy9",
+        "shields": 1,
+        "speed": 100,
+        "powerUpChance": 2,
+    },
+    {
+        "name": "enemy10",
+        "shields": 1,
+        "speed": 100,
+        "powerUpChance": 2,
+    },
+]
+
