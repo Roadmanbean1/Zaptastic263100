@@ -52,19 +52,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.physicsBody?.collisionBitMask = CollisionType.enemy.rawValue | CollisionType.enemyWeapon.rawValue
         player.physicsBody?.contactTestBitMask = CollisionType.enemy.rawValue | CollisionType.enemyWeapon.rawValue
         player.physicsBody?.isDynamic = false
+        
+        motionManager.startAccelerometerUpdates()
 
 
     }
 
     override func update(_ currentTime: TimeInterval) {
+        
 
         if let accelerometerData = motionManager.accelerometerData {
-            player.position.y += CGFloat(accelerometerData.acceleration.y * 50)
+            player.position.y += CGFloat(accelerometerData.acceleration.y * 50 )
 
-            if player.position.y < frame.minY {
-                player.position.y = frame.minY
-            } else if player.position.y > frame.maxY {
-                player.position.y = frame.maxY
+            if player.position.y < frame.minY + 469 {
+                player.position.y = frame.minY + 469
+            } else if player.position.y > frame.maxY - 469 {
+                player.position.y = frame.maxY - 469
             }
         }
 
@@ -118,6 +121,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         } else {
             for enemy in currentWave.enemies {
+                //maybe create an integer variable inside this loop which gets increased every time a child is added. maybe that can be
+                //create a shuffled array of stride which uses the maximum parameter of currentWave.enemies.count a uses a by of 1. create a previous wave count quality which becomes the lower bound of the stride.
                 let node = EnemyNode(type: enemyTypes[enemyType], startPosition: CGPoint(x: enemyStartX, y: positions[enemy.position]), xOffset: enemyOffsetX * enemy.xOffset, moveStraight: enemy.moveStraight, shieldAdder: 0)
                 addChild(node)
             }
@@ -136,6 +141,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         shot.physicsBody?.collisionBitMask = CollisionType.enemy.rawValue | CollisionType.enemyWeapon.rawValue
         shot.physicsBody?.contactTestBitMask = CollisionType.enemy.rawValue | CollisionType.enemyWeapon.rawValue
         shot.physicsBody?.mass = 0.001
+        addChild(shot)
 
         let movement = SKAction.move(to: CGPoint(x: 1900, y: shot.position.y), duration: 5)
         let sequence = SKAction.sequence([movement, .removeFromParent()])
@@ -157,6 +163,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 explosion.position = firstNode.position
                 addChild(explosion)
             }
+            //When adding the explosion you can fastforward the animation a bit so that it looks more like the desired animation which you would like.
 //
 //            playerShields -= 1
 //            print(playerShields)

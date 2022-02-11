@@ -23,6 +23,7 @@
 		004DFD4327B55E3200B1D108 /* EnemyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004DFD4227B55E3200B1D108 /* EnemyType.swift */; };
 		004DFD4527B55E4100B1D108 /* Waves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004DFD4427B55E4100B1D108 /* Waves.swift */; };
 		004DFD4727B55E8500B1D108 /* Bundle Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004DFD4627B55E8500B1D108 /* Bundle Decoding.swift */; };
+		004DFD4927B6B2BB00B1D108 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 004DFD4827B6B2BB00B1D108 /* Explosion.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		004DFD4227B55E3200B1D108 /* EnemyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyType.swift; sourceTree = "<group>"; };
 		004DFD4427B55E4100B1D108 /* Waves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waves.swift; sourceTree = "<group>"; };
 		004DFD4627B55E8500B1D108 /* Bundle Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle Decoding.swift"; sourceTree = "<group>"; };
+		004DFD4827B6B2BB00B1D108 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				004DFD4627B55E8500B1D108 /* Bundle Decoding.swift */,
 				004DFD3D27B55E0500B1D108 /* enemy-types.json */,
 				004DFD2727B55CBF00B1D108 /* GameScene.swift */,
+				004DFD4827B6B2BB00B1D108 /* Explosion.sks */,
 				004DFD3C27B55E0500B1D108 /* waves.json */,
 				004DFD2927B55CBF00B1D108 /* GameViewController.swift */,
 				004DFD2B27B55CBF00B1D108 /* Main.storyboard */,
@@ -160,6 +163,7 @@
 				004DFD2427B55CBF00B1D108 /* GameScene.sks in Resources */,
 				004DFD2F27B55CC300B1D108 /* Assets.xcassets in Resources */,
 				004DFD3B27B55CDE00B1D108 /* Assets.xcassets in Resources */,
+				004DFD4927B6B2BB00B1D108 /* Explosion.sks in Resources */,
 				004DFD3227B55CC300B1D108 /* LaunchScreen.storyboard in Resources */,
 				004DFD2627B55CBF00B1D108 /* Actions.sks in Resources */,
 			);
