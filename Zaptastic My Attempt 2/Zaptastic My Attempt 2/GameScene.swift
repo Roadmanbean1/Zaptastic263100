@@ -97,6 +97,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
+    //changed integer randomiser above
 
     func createWave() {
         guard isPlayerAlive else {return}
@@ -113,17 +114,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let enemyType = Int.random(in: 0..<maximumEnemyType)
         let enemyOffsetX: CGFloat = 100
         let enemyStartX = 600
-
         if currentWave.enemies.isEmpty {
             for (index, position) in positions.shuffled().enumerated() {
-                let enemy = EnemyNode(type: enemyTypes[enemyType], startPosition: CGPoint(x: enemyStartX, y: position), xOffset: enemyOffsetX * CGFloat(index * 3), moveStraight: true, shieldAdder: 0)
+                let enemy = EnemyNode(type: enemyTypes[enemyType], startPosition: CGPoint(x: enemyStartX, y: position), xOffset: enemyOffsetX * CGFloat(index * 3), moveStraight: true, shieldAdder: 0, enemyImage: 1)
                 addChild(enemy)
             }
         } else {
             for enemy in currentWave.enemies {
                 //maybe create an integer variable inside this loop which gets increased every time a child is added. maybe that can be
                 //create a shuffled array of stride which uses the maximum parameter of currentWave.enemies.count a uses a by of 1. create a previous wave count quality which becomes the lower bound of the stride.
-                let node = EnemyNode(type: enemyTypes[enemyType], startPosition: CGPoint(x: enemyStartX, y: positions[enemy.position]), xOffset: enemyOffsetX * enemy.xOffset, moveStraight: enemy.moveStraight, shieldAdder: 0)
+                let node = EnemyNode(type: enemyTypes[enemyType], startPosition: CGPoint(x: enemyStartX, y: positions[enemy.position]), xOffset: enemyOffsetX * enemy.xOffset, moveStraight: enemy.moveStraight, shieldAdder: 0, enemyImage: enemy.enemyImage)
                 addChild(node)
             }
         }
