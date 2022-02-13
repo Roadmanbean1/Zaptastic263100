@@ -13,7 +13,6 @@ struct Wave: Codable {
         var position: Int
         var xOffset: CGFloat
         var moveStraight: Bool
-        var enemyImage: Int
     }
     
     var name: String

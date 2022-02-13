@@ -6,17 +6,13 @@ class EnemyNode: SKSpriteNode {
     var lastFireTime: Double = 0
     var shields: Int
     var shieldAdder: Int
-    var enemyImage: Int
     
-    init(type: EnemyType, startPosition: CGPoint, xOffset: CGFloat, moveStraight: Bool, shieldAdder: Int, enemyImage: Int) {
+    init(type: EnemyType, startPosition: CGPoint, xOffset: CGFloat, moveStraight: Bool, shieldAdder: Int) {
         self.type = type
         self.shieldAdder = shieldAdder
-        self.enemyImage = enemyImage
         shields = type.shields + shieldAdder
-        var str = String(enemyImage)
-        var actualImage = type.name + str
         
-        let texture = SKTexture(imageNamed: actualImage)
+        let texture = SKTexture(imageNamed: type.name)
         super.init(texture: texture, color: .white, size: texture.size())
         
         physicsBody = SKPhysicsBody(texture: texture, size: texture.size())
@@ -25,7 +21,7 @@ class EnemyNode: SKSpriteNode {
         physicsBody?.contactTestBitMask = CollisionType.player.rawValue | CollisionType.playerWeapon.rawValue
         name = "enemy"
         position = CGPoint(x: startPosition.x + xOffset, y: startPosition.y)
-        self.setScale(0.2)
+        
         configureMovement(moveStraight)
     }
     
@@ -50,7 +46,7 @@ class EnemyNode: SKSpriteNode {
     }
     
     func fire() {
-        let weaponType = "\(type.name)\(enemyImage)Weapon"
+        let weaponType = "\(type.name)Weapon"
         
         let weapon = SKSpriteNode(imageNamed: weaponType)
         weapon.name = "enemyWeapon"
