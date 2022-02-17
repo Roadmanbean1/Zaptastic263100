@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Zaptastic_My_Attempt_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -32,14 +32,14 @@
             <objects>
                 <viewController storyboardIdentifier="Main" title="MainMenu" id="zSe-mV-tQI" userLabel="MainMenu" customClass="MainMenu" customModule="Zaptastic_My_Attempt_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hT1-Gg-P7o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G1z-Mg-fnH">
-                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="-44" width="414" height="930"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sw1-bu-YA6">
-                                <rect key="frame" x="69" y="429" width="276" height="184.5"/>
+                                <rect key="frame" x="69" y="341" width="276" height="184.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="playMode"/>
                                 <connections>
@@ -63,39 +63,26 @@
                     <connections>
                         <outlet property="play" destination="Sw1-bu-YA6" id="46F-Z3-Lw6"/>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="play" id="U9y-l0-Dnz"/>
-                        <segue destination="SQd-kc-PWV" kind="presentation" id="NdZ-ND-bWe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ql9-cN-GrK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1934.7826086956522" y="-282.58928571428572"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="JdE-lw-ts4">
-            <objects>
-                <viewController id="SQd-kc-PWV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5e8-jF-Etp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="fMu-j0-aSh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fVI-ZC-1Aa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2762" y="-281"/>
-        </scene>
         <!--Quiz-->
         <scene sceneID="ko6-KO-Bfp">
             <objects>
                 <viewController title="Quiz" id="gAk-Wh-9P5" customClass="Quiz" customModule="Zaptastic_My_Attempt_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nTp-lR-O8p">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="r3I-bB-jPe"/>
                         <color key="backgroundColor" systemColor="linkColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="qrH-8Z-xNa"/>
+                    <connections>
+                        <segue destination="zSe-mV-tQI" kind="show" identifier="goHome" id="YsQ-5v-sX7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oS9-Xg-jnk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,6 +93,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kBO-tl-MWf" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uin-yD-GRa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sWN-2f-w5d">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -120,6 +108,9 @@
             <point key="canvasLocation" x="1024.6376811594205" y="-282.58928571428572"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YsQ-5v-sX7"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="backgroundImage" width="912" height="584"/>
         <image name="playMode" width="266.66665649414062" height="170.66667175292969"/>

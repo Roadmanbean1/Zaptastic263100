@@ -33,8 +33,8 @@
 		0050BD4527BC805B00891D26 /* FooFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0050BD3027BC805900891D26 /* FooFramework.framework */; };
 		0050BD4627BC805B00891D26 /* FooFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0050BD3027BC805900891D26 /* FooFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0050BD4F27BC810F00891D26 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BD4E27BC810F00891D26 /* Example.swift */; };
-		0050BD5227BE68C000891D26 /* FadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BD5127BE68BD00891D26 /* FadeSegue.swift */; };
-		0050BD5427BE694000891D26 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BD5327BE694000891D26 /* ScaleSegue.swift */; };
+		0050BD5527BEF98B00891D26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004DFD2B27B55CBF00B1D108 /* Main.storyboard */; };
+		0050BD5627BEF98D00891D26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004DFD2B27B55CBF00B1D108 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,8 +102,6 @@
 		0050BD3927BC805A00891D26 /* FooFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FooFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0050BD4027BC805A00891D26 /* FooFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooFrameworkTests.swift; sourceTree = "<group>"; };
 		0050BD4E27BC810F00891D26 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
-		0050BD5127BE68BD00891D26 /* FadeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeSegue.swift; sourceTree = "<group>"; };
-		0050BD5327BE694000891D26 /* ScaleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,8 +207,6 @@
 		0050BD5027BE684F00891D26 /* Custom Segues */ = {
 			isa = PBXGroup;
 			children = (
-				0050BD5127BE68BD00891D26 /* FadeSegue.swift */,
-				0050BD5327BE694000891D26 /* ScaleSegue.swift */,
 			);
 			path = "Custom Segues";
 			sourceTree = "<group>";
@@ -349,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0050BD5527BEF98B00891D26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0050BD5627BEF98D00891D26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,9 +372,7 @@
 				004DFD4127B55E2A00B1D108 /* EnemyNode.swift in Sources */,
 				004DFD4527B55E4100B1D108 /* Waves.swift in Sources */,
 				004DFD2227B55CBF00B1D108 /* AppDelegate.swift in Sources */,
-				0050BD5427BE694000891D26 /* ScaleSegue.swift in Sources */,
 				0050BD2A27BC101900891D26 /* Quiz.swift in Sources */,
-				0050BD5227BE68C000891D26 /* FadeSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

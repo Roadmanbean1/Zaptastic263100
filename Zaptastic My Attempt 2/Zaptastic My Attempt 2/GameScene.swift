@@ -10,7 +10,7 @@
 import CoreMotion
 import SpriteKit
 import Foundation
-//import FooFramework
+import FooFramework
 
 enum CollisionType: UInt32 {
     case player = 1
@@ -23,12 +23,22 @@ extension Bool {
         self = !self
     }
 }
+public var cereal = 0
+public func changeIt(){
+    cereal = 1
+}
 
+
+//if car.integer == 1 {
+//    DispatchQueue.main.async {
+//        changeIt()
+//
+//
+//    }
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    
     open var car = Vehicle()
     
-   
+  
     
     let motionManager = CMMotionManager()
     let player = SKSpriteNode(imageNamed: "player")
@@ -81,7 +91,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //                    self.view = nil
            
         }
-        print(car.integer)
+//        print(car.integer)
         
 
         if let accelerometerData = motionManager.accelerometerData {
@@ -131,13 +141,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
 
         if waveNumber == waves.count {
+            DispatchQueue.main.async {
+                changeIt()
+                self.inputViewController?.performSegue(withIdentifier: "Play", sender: self)
+            
+            }
             levelNumber += 1
             waveNumber = 0
-            DispatchQueue.main.async {
-                self.car.changeIt()
+            
                 
                 
-            }
+            
             
             
                 
