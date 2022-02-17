@@ -6,13 +6,15 @@ class EnemyNode: SKSpriteNode {
     var lastFireTime: Double = 0
     var shields: Int
     var shieldAdder: Int
+    var imagePicker: Int
     
-    init(type: EnemyType, startPosition: CGPoint, xOffset: CGFloat, moveStraight: Bool, shieldAdder: Int) {
+    init(type: EnemyType, startPosition: CGPoint, xOffset: CGFloat, moveStraight: Bool, shieldAdder: Int, imagePicker: Int) {
         self.type = type
         self.shieldAdder = shieldAdder
         shields = type.shields + shieldAdder
+        self.imagePicker = imagePicker
         
-        let texture = SKTexture(imageNamed: type.name)
+        let texture = SKTexture(imageNamed: type.name + "\(imagePicker)")
         super.init(texture: texture, color: .white, size: texture.size())
         
         physicsBody = SKPhysicsBody(texture: texture, size: texture.size())

@@ -9,6 +9,8 @@
 
 import CoreMotion
 import SpriteKit
+import Foundation
+//import FooFramework
 
 enum CollisionType: UInt32 {
     case player = 1
@@ -16,14 +18,21 @@ enum CollisionType: UInt32 {
     case enemy = 4
     case enemyWeapon = 8
 }
+extension Bool {
+    mutating func toggle() {
+        self = !self
+    }
+}
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-
+    
+    open var car = Vehicle()
+    
+   
+    
     let motionManager = CMMotionManager()
-
     let player = SKSpriteNode(imageNamed: "player")
     var playerShields = 10
-
     var isPlayerAlive = true
     let waves = Bundle.main.decode([Wave].self, from: "waves.json")
     let enemyTypes = Bundle.main.decode([EnemyType].self, from: "enemy-types.json")
@@ -58,7 +67,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     }
 
+//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goToQuiz" {
+//            let destinationVC = segue.destination as! Quiz
+//            destinationVC.levelValue = levelNumber
+//        }
+//    }
+
     override func update(_ currentTime: TimeInterval) {
+        if waveNumber == 1 {
+            scene?.removeFromParent()
+            
+    //                    self.view = nil
+           
+        }
+        print(car.integer)
         
 
         if let accelerometerData = motionManager.accelerometerData {
@@ -97,18 +120,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
-
+//    func segue(){
+//        self.view!.window!.rootViewController!.performSegue(withIdentifier: "Test", sender: self)
+//    }
+            
+    
     func createWave() {
         guard isPlayerAlive else {return}
+        
+        
 
         if waveNumber == waves.count {
             levelNumber += 1
             waveNumber = 0
+            DispatchQueue.main.async {
+                self.car.changeIt()
+                
+                
+            }
+            
+            
+                
+            
         }
 
         let currentWave = waves[waveNumber % waves.count]
         waveNumber += 1
-
+      
         let maximumEnemyType = min(enemyTypes.count, levelNumber + 1)
         let enemyType = Int.random(in: 0..<maximumEnemyType)
         let enemyOffsetX: CGFloat = 100
@@ -116,18 +154,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         if currentWave.enemies.isEmpty {
             for (index, position) in positions.shuffled().enumerated() {
-                let enemy = EnemyNode(type: enemyTypes[enemyType], startPosition: CGPoint(x: enemyStartX, y: position), xOffset: enemyOffsetX * CGFloat(index * 3), moveStraight: true, shieldAdder: 0)
+                let enemy = EnemyNode(type: enemyTypes[enemyType], startPosition: CGPoint(x: enemyStartX, y: position), xOffset: enemyOffsetX * CGFloat(index * 3), moveStraight: true, shieldAdder: 0, imagePicker: 1)
                 addChild(enemy)
             }
         } else {
             for enemy in currentWave.enemies {
                 //maybe create an integer variable inside this loop which gets increased every time a child is added. maybe that can be
                 //create a shuffled array of stride which uses the maximum parameter of currentWave.enemies.count a uses a by of 1. create a previous wave count quality which becomes the lower bound of the stride.
-                let node = EnemyNode(type: enemyTypes[enemyType], startPosition: CGPoint(x: enemyStartX, y: positions[enemy.position]), xOffset: enemyOffsetX * enemy.xOffset, moveStraight: enemy.moveStraight, shieldAdder: 0)
+                let node = EnemyNode(type: enemyTypes[enemyType], startPosition: CGPoint(x: enemyStartX, y: positions[enemy.position]), xOffset: enemyOffsetX * enemy.xOffset, moveStraight: enemy.moveStraight, shieldAdder: 0, imagePicker: 1)
                 addChild(node)
             }
         }
     }
+    
+    
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard isPlayerAlive else { return }

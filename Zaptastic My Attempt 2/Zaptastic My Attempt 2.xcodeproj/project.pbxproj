@@ -25,7 +25,55 @@
 		004DFD4727B55E8500B1D108 /* Bundle Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004DFD4627B55E8500B1D108 /* Bundle Decoding.swift */; };
 		004DFD4927B6B2BB00B1D108 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 004DFD4827B6B2BB00B1D108 /* Explosion.sks */; };
 		0050BD2827BB1FB800891D26 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BD2727BB1FB800891D26 /* MainMenu.swift */; };
+		0050BD2A27BC101900891D26 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BD2927BC101900891D26 /* Quiz.swift */; };
+		0050BD3427BC805A00891D26 /* FooFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0050BD3327BC805900891D26 /* FooFramework.docc */; };
+		0050BD3A27BC805A00891D26 /* FooFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0050BD3027BC805900891D26 /* FooFramework.framework */; };
+		0050BD4127BC805A00891D26 /* FooFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BD4027BC805A00891D26 /* FooFrameworkTests.swift */; };
+		0050BD4227BC805A00891D26 /* FooFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 0050BD3227BC805900891D26 /* FooFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0050BD4527BC805B00891D26 /* FooFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0050BD3027BC805900891D26 /* FooFramework.framework */; };
+		0050BD4627BC805B00891D26 /* FooFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0050BD3027BC805900891D26 /* FooFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0050BD4F27BC810F00891D26 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BD4E27BC810F00891D26 /* Example.swift */; };
+		0050BD5227BE68C000891D26 /* FadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BD5127BE68BD00891D26 /* FadeSegue.swift */; };
+		0050BD5427BE694000891D26 /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BD5327BE694000891D26 /* ScaleSegue.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0050BD3B27BC805A00891D26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 004DFD1627B55CBF00B1D108 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0050BD2F27BC805900891D26;
+			remoteInfo = FooFramework;
+		};
+		0050BD3D27BC805A00891D26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 004DFD1627B55CBF00B1D108 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 004DFD1D27B55CBF00B1D108;
+			remoteInfo = "Zaptastic My Attempt 2";
+		};
+		0050BD4327BC805B00891D26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 004DFD1627B55CBF00B1D108 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0050BD2F27BC805900891D26;
+			remoteInfo = FooFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0050BD4727BC805B00891D26 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0050BD4627BC805B00891D26 /* FooFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		004DFD1E27B55CBF00B1D108 /* Zaptastic My Attempt 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zaptastic My Attempt 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +95,15 @@
 		004DFD4627B55E8500B1D108 /* Bundle Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle Decoding.swift"; sourceTree = "<group>"; };
 		004DFD4827B6B2BB00B1D108 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		0050BD2727BB1FB800891D26 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainMenu.swift; path = "Zaptastic My Attempt 2/MainMenu.swift"; sourceTree = SOURCE_ROOT; };
+		0050BD2927BC101900891D26 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Quiz.swift; path = "Zaptastic My Attempt 2/Quiz.swift"; sourceTree = SOURCE_ROOT; };
+		0050BD3027BC805900891D26 /* FooFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FooFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0050BD3227BC805900891D26 /* FooFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FooFramework.h; sourceTree = "<group>"; };
+		0050BD3327BC805900891D26 /* FooFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FooFramework.docc; sourceTree = "<group>"; };
+		0050BD3927BC805A00891D26 /* FooFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FooFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0050BD4027BC805A00891D26 /* FooFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooFrameworkTests.swift; sourceTree = "<group>"; };
+		0050BD4E27BC810F00891D26 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		0050BD5127BE68BD00891D26 /* FadeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeSegue.swift; sourceTree = "<group>"; };
+		0050BD5327BE694000891D26 /* ScaleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +111,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0050BD4527BC805B00891D26 /* FooFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0050BD2D27BC805900891D26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0050BD3627BC805A00891D26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0050BD3A27BC805A00891D26 /* FooFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +139,8 @@
 				004DFD3827B55CDE00B1D108 /* Starfield.sks */,
 				004DFD3927B55CDE00B1D108 /* Assets.xcassets */,
 				004DFD2027B55CBF00B1D108 /* Zaptastic My Attempt 2 */,
+				0050BD3127BC805900891D26 /* FooFramework */,
+				0050BD3F27BC805A00891D26 /* FooFrameworkTests */,
 				004DFD1F27B55CBF00B1D108 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				004DFD1E27B55CBF00B1D108 /* Zaptastic My Attempt 2.app */,
+				0050BD3027BC805900891D26 /* FooFramework.framework */,
+				0050BD3927BC805A00891D26 /* FooFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +158,7 @@
 		004DFD2027B55CBF00B1D108 /* Zaptastic My Attempt 2 */ = {
 			isa = PBXGroup;
 			children = (
+				0050BD5027BE684F00891D26 /* Custom Segues */,
 				004DFD2127B55CBF00B1D108 /* AppDelegate.swift */,
 				004DFD2327B55CBF00B1D108 /* GameScene.sks */,
 				004DFD2527B55CBF00B1D108 /* Actions.sks */,
@@ -103,13 +181,52 @@
 		0050BD2627BB1E2200891D26 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0050BD2927BC101900891D26 /* Quiz.swift */,
 				0050BD2727BB1FB800891D26 /* MainMenu.swift */,
 				004DFD2927B55CBF00B1D108 /* GameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		0050BD3127BC805900891D26 /* FooFramework */ = {
+			isa = PBXGroup;
+			children = (
+				0050BD3227BC805900891D26 /* FooFramework.h */,
+				0050BD3327BC805900891D26 /* FooFramework.docc */,
+				0050BD4E27BC810F00891D26 /* Example.swift */,
+			);
+			path = FooFramework;
+			sourceTree = "<group>";
+		};
+		0050BD3F27BC805A00891D26 /* FooFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				0050BD4027BC805A00891D26 /* FooFrameworkTests.swift */,
+			);
+			path = FooFrameworkTests;
+			sourceTree = "<group>";
+		};
+		0050BD5027BE684F00891D26 /* Custom Segues */ = {
+			isa = PBXGroup;
+			children = (
+				0050BD5127BE68BD00891D26 /* FadeSegue.swift */,
+				0050BD5327BE694000891D26 /* ScaleSegue.swift */,
+			);
+			path = "Custom Segues";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0050BD2B27BC805900891D26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0050BD4227BC805A00891D26 /* FooFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		004DFD1D27B55CBF00B1D108 /* Zaptastic My Attempt 2 */ = {
@@ -119,15 +236,54 @@
 				004DFD1A27B55CBF00B1D108 /* Sources */,
 				004DFD1B27B55CBF00B1D108 /* Frameworks */,
 				004DFD1C27B55CBF00B1D108 /* Resources */,
+				0050BD4727BC805B00891D26 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0050BD4427BC805B00891D26 /* PBXTargetDependency */,
 			);
 			name = "Zaptastic My Attempt 2";
 			productName = "Zaptastic My Attempt 2";
 			productReference = 004DFD1E27B55CBF00B1D108 /* Zaptastic My Attempt 2.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0050BD2F27BC805900891D26 /* FooFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0050BD4C27BC805B00891D26 /* Build configuration list for PBXNativeTarget "FooFramework" */;
+			buildPhases = (
+				0050BD2B27BC805900891D26 /* Headers */,
+				0050BD2C27BC805900891D26 /* Sources */,
+				0050BD2D27BC805900891D26 /* Frameworks */,
+				0050BD2E27BC805900891D26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FooFramework;
+			productName = FooFramework;
+			productReference = 0050BD3027BC805900891D26 /* FooFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0050BD3827BC805A00891D26 /* FooFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0050BD4D27BC805B00891D26 /* Build configuration list for PBXNativeTarget "FooFrameworkTests" */;
+			buildPhases = (
+				0050BD3527BC805A00891D26 /* Sources */,
+				0050BD3627BC805A00891D26 /* Frameworks */,
+				0050BD3727BC805A00891D26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0050BD3C27BC805A00891D26 /* PBXTargetDependency */,
+				0050BD3E27BC805A00891D26 /* PBXTargetDependency */,
+			);
+			name = FooFrameworkTests;
+			productName = FooFrameworkTests;
+			productReference = 0050BD3927BC805A00891D26 /* FooFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -141,6 +297,13 @@
 				TargetAttributes = {
 					004DFD1D27B55CBF00B1D108 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					0050BD2F27BC805900891D26 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					0050BD3827BC805A00891D26 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 004DFD1D27B55CBF00B1D108;
 					};
 				};
 			};
@@ -158,6 +321,8 @@
 			projectRoot = "";
 			targets = (
 				004DFD1D27B55CBF00B1D108 /* Zaptastic My Attempt 2 */,
+				0050BD2F27BC805900891D26 /* FooFramework */,
+				0050BD3827BC805A00891D26 /* FooFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -180,6 +345,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0050BD2E27BC805900891D26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0050BD3727BC805A00891D26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -195,10 +374,48 @@
 				004DFD4127B55E2A00B1D108 /* EnemyNode.swift in Sources */,
 				004DFD4527B55E4100B1D108 /* Waves.swift in Sources */,
 				004DFD2227B55CBF00B1D108 /* AppDelegate.swift in Sources */,
+				0050BD5427BE694000891D26 /* ScaleSegue.swift in Sources */,
+				0050BD2A27BC101900891D26 /* Quiz.swift in Sources */,
+				0050BD5227BE68C000891D26 /* FadeSegue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0050BD2C27BC805900891D26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0050BD4F27BC810F00891D26 /* Example.swift in Sources */,
+				0050BD3427BC805A00891D26 /* FooFramework.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0050BD3527BC805A00891D26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0050BD4127BC805A00891D26 /* FooFrameworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0050BD3C27BC805A00891D26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0050BD2F27BC805900891D26 /* FooFramework */;
+			targetProxy = 0050BD3B27BC805A00891D26 /* PBXContainerItemProxy */;
+		};
+		0050BD3E27BC805A00891D26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 004DFD1D27B55CBF00B1D108 /* Zaptastic My Attempt 2 */;
+			targetProxy = 0050BD3D27BC805A00891D26 /* PBXContainerItemProxy */;
+		};
+		0050BD4427BC805B00891D26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0050BD2F27BC805900891D26 /* FooFramework */;
+			targetProxy = 0050BD4327BC805B00891D26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		004DFD2B27B55CBF00B1D108 /* Main.storyboard */ = {
@@ -339,6 +556,7 @@
 		004DFD3627B55CC300B1D108 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -367,6 +585,7 @@
 		004DFD3727B55CC300B1D108 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -392,6 +611,112 @@
 			};
 			name = Release;
 		};
+		0050BD4827BC805B00891D26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 34W2FYTXK7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BenThoburn.FooFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0050BD4927BC805B00891D26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 34W2FYTXK7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BenThoburn.FooFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0050BD4A27BC805B00891D26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34W2FYTXK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BenThoburn.FooFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zaptastic My Attempt 2.app/Zaptastic My Attempt 2";
+			};
+			name = Debug;
+		};
+		0050BD4B27BC805B00891D26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34W2FYTXK7;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BenThoburn.FooFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zaptastic My Attempt 2.app/Zaptastic My Attempt 2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -409,6 +734,24 @@
 			buildConfigurations = (
 				004DFD3627B55CC300B1D108 /* Debug */,
 				004DFD3727B55CC300B1D108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0050BD4C27BC805B00891D26 /* Build configuration list for PBXNativeTarget "FooFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0050BD4827BC805B00891D26 /* Debug */,
+				0050BD4927BC805B00891D26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0050BD4D27BC805B00891D26 /* Build configuration list for PBXNativeTarget "FooFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0050BD4A27BC805B00891D26 /* Debug */,
+				0050BD4B27BC805B00891D26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
