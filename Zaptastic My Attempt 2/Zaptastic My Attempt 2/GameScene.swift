@@ -11,6 +11,7 @@ import CoreMotion
 import SpriteKit
 import Foundation
 import FooFramework
+import CoreData
 
 enum CollisionType: UInt32 {
     case player = 1
@@ -28,17 +29,11 @@ public func changeIt(){
     cereal = 1
 }
 
-
-//if car.integer == 1 {
-//    DispatchQueue.main.async {
-//        changeIt()
-//
-//
-//    }
 class GameScene: SKScene, SKPhysicsContactDelegate {
     open var car = Vehicle()
-    
-  
+    deinit{
+        NotificationCenter.default.removeObserver(self)
+    }
     
     let motionManager = CMMotionManager()
     let player = SKSpriteNode(imageNamed: "player")
@@ -77,22 +72,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     }
 
-//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goToQuiz" {
-//            let destinationVC = segue.destination as! Quiz
-//            destinationVC.levelValue = levelNumber
-//        }
-//    }
-
     override func update(_ currentTime: TimeInterval) {
-        if waveNumber == 1 {
-            scene?.removeFromParent()
-            
-    //                    self.view = nil
-           
-        }
-//        print(car.integer)
-        
+//        doChange()
+//        if waveNumber == 1 {
+////            scene?.removeFromParent()
+//        }
 
         if let accelerometerData = motionManager.accelerometerData {
             player.position.y += CGFloat(accelerometerData.acceleration.y * 50 )
@@ -130,31 +114,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
     }
-//    func segue(){
-//        self.view!.window!.rootViewController!.performSegue(withIdentifier: "Test", sender: self)
-//    }
+    func changeScreen() {
+        if levelNumber == 1 {
+            let name = Notification.Name(rawValue: changeScreen1)
+            NotificationCenter.default.post(name: name, object: nil)
+     
             
-    
+        }
+        
+    }
+    func doChange() {
+        if levelNumber == 1 {
+            changeScreen()
+        }
+    }
+
     func createWave() {
         guard isPlayerAlive else {return}
-        
-        
-
+    
         if waveNumber == waves.count {
             DispatchQueue.main.async {
-                changeIt()
+//                changeIt()
                 self.inputViewController?.performSegue(withIdentifier: "Play", sender: self)
-            
+                
             }
             levelNumber += 1
             waveNumber = 0
-            
-                
-                
-            
-            
-            
-                
+            changeScreen()
+            levelNumber = 2
             
         }
 
@@ -218,15 +205,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 addChild(explosion)
             }
             //When adding the explosion you can fastforward the animation a bit so that it looks more like the desired animation which you would like.
-//
-//            playerShields -= 1
-//            print(playerShields)
-//
-//            if playerShields == 0 {
-//                gameOver()
-//                secondNode.removeFromParent()
-//            }
-
 
         } else if let enemy = firstNode as? EnemyNode {
             enemy.shields -= 1
@@ -269,3 +247,35 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 }
 //
+//    func segue(){
+//        self.view!.window!.rootViewController!.performSegue(withIdentifier: "Test", sender: self)
+//    }
+
+//    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goToQuiz" {
+//            let destinationVC = segue.destination as! Quiz
+//            destinationVC.levelValue = levelNumber
+//        }
+//    }
+//
+//            playerShields -= 1
+//            print(playerShields)
+//
+//            if playerShields == 0 {
+//                gameOver()
+//                secondNode.removeFromParent()
+//            }
+//if car.integer == 1 {
+//    DispatchQueue.main.async {
+//        changeIt()
+//
+//
+//    }
+//if car.integer == 1 {
+//    DispatchQueue.main.async {
+//        changeIt()
+//
+//
+//    }
+//                    self.view = nil
+
