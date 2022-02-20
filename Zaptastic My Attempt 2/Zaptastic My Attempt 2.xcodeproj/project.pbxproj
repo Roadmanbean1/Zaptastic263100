@@ -35,6 +35,8 @@
 		0050BD4F27BC810F00891D26 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0050BD4E27BC810F00891D26 /* Example.swift */; };
 		0050BD5527BEF98B00891D26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004DFD2B27B55CBF00B1D108 /* Main.storyboard */; };
 		0050BD5627BEF98D00891D26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 004DFD2B27B55CBF00B1D108 /* Main.storyboard */; };
+		00513F2227C27F1300BB84A7 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00513F2127C27F1300BB84A7 /* QuizBrain.swift */; };
+		00513F2427C2812600BB84A7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00513F2327C2812600BB84A7 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		0050BD3927BC805A00891D26 /* FooFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FooFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0050BD4027BC805A00891D26 /* FooFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooFrameworkTests.swift; sourceTree = "<group>"; };
 		0050BD4E27BC810F00891D26 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		00513F2127C27F1300BB84A7 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuizBrain.swift; path = "Zaptastic My Attempt 2/QuizBrain.swift"; sourceTree = SOURCE_ROOT; };
+		00513F2327C2812600BB84A7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 				004DFD4627B55E8500B1D108 /* Bundle Decoding.swift */,
 				004DFD3D27B55E0500B1D108 /* enemy-types.json */,
 				004DFD2727B55CBF00B1D108 /* GameScene.swift */,
+				00513F2127C27F1300BB84A7 /* QuizBrain.swift */,
+				00513F2327C2812600BB84A7 /* Question.swift */,
 				004DFD4827B6B2BB00B1D108 /* Explosion.sks */,
 				004DFD3C27B55E0500B1D108 /* waves.json */,
 				004DFD2B27B55CBF00B1D108 /* Main.storyboard */,
@@ -369,9 +375,11 @@
 				004DFD2A27B55CBF00B1D108 /* GameViewController.swift in Sources */,
 				0050BD2827BB1FB800891D26 /* MainMenu.swift in Sources */,
 				004DFD4727B55E8500B1D108 /* Bundle Decoding.swift in Sources */,
+				00513F2227C27F1300BB84A7 /* QuizBrain.swift in Sources */,
 				004DFD4127B55E2A00B1D108 /* EnemyNode.swift in Sources */,
 				004DFD4527B55E4100B1D108 /* Waves.swift in Sources */,
 				004DFD2227B55CBF00B1D108 /* AppDelegate.swift in Sources */,
+				00513F2427C2812600BB84A7 /* Question.swift in Sources */,
 				0050BD2A27BC101900891D26 /* Quiz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
