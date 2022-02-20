@@ -116,7 +116,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     func changeScreen() {
         if levelNumber == 1 {
-            self.view?.presentScene(nil)
             let name = Notification.Name(rawValue: changeScreen1)
             NotificationCenter.default.post(name: name, object: nil)
      
@@ -142,7 +141,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             levelNumber += 1
             waveNumber = 0
             changeScreen()
-//            levelNumber = 2
+            levelNumber = 2
             
         }
 

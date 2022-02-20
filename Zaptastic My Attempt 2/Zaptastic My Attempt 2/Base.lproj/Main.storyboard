@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zSe-mV-tQI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kBO-tl-MWf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -20,7 +20,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ub2-N7-U1E"/>
                     <connections>
-                        <segue destination="gAk-Wh-9P5" kind="presentation" identifier="Play" modalPresentationStyle="fullScreen" id="92x-NX-WNk"/>
+                        <segue destination="gAk-Wh-9P5" kind="show" identifier="Play" id="92x-NX-WNk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -32,14 +32,14 @@
             <objects>
                 <viewController storyboardIdentifier="Main" title="MainMenu" id="zSe-mV-tQI" userLabel="MainMenu" customClass="MainMenu" customModule="FooFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hT1-Gg-P7o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G1z-Mg-fnH">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="930"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sw1-bu-YA6">
-                                <rect key="frame" x="69" y="341" width="276" height="184.5"/>
+                                <rect key="frame" x="69" y="429" width="276" height="184.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="playMode"/>
                                 <connections>
@@ -62,12 +62,12 @@
                     <navigationItem key="navigationItem" id="D1B-sT-b68"/>
                     <connections>
                         <outlet property="play" destination="Sw1-bu-YA6" id="46F-Z3-Lw6"/>
-                        <segue destination="BV1-FR-VrT" kind="presentation" identifier="play" modalPresentationStyle="fullScreen" id="U9y-l0-Dnz"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="play" id="U9y-l0-Dnz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ql9-cN-GrK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="209" y="530"/>
+            <point key="canvasLocation" x="1934.7826086956522" y="-282.58928571428572"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="ko6-KO-Bfp">
@@ -76,6 +76,7 @@
                     <view key="view" contentMode="scaleToFill" id="nTp-lR-O8p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< HEAD
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iof-tL-H2t">
                                 <rect key="frame" x="0.0" y="44" width="76" height="29"/>
@@ -92,6 +93,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+=======
+>>>>>>> parent of a241389 (Automatic scene switch after go back to game button clicked)
                         <viewLayoutGuide key="safeArea" id="r3I-bB-jPe"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
@@ -107,7 +110,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="AkS-cp-JqI"/>
                     <connections>
-                        <outlet property="backButton" destination="Iof-tL-H2t" id="dbU-kG-V3r"/>
                         <segue destination="zSe-mV-tQI" kind="show" identifier="goHome" id="YsQ-5v-sX7"/>
                     </connections>
                 </viewController>
@@ -115,7 +117,29 @@
             </objects>
             <point key="canvasLocation" x="1821.7391304347827" y="529.6875"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YSo-To-hp9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kBO-tl-MWf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uin-yD-GRa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sWN-2f-w5d">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zSe-mV-tQI" kind="relationship" relationship="rootViewController" id="gem-3Q-PE1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9I-kg-1ii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024.6376811594205" y="-282.58928571428572"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gem-3Q-PE1"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="backgroundImage" width="912" height="584"/>
         <image name="playMode" width="266.66665649414062" height="170.66667175292969"/>

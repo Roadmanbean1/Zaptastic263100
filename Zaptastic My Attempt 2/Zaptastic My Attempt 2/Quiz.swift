@@ -8,6 +8,7 @@
 import UIKit
 
 class Quiz: UIViewController {
+<<<<<<< HEAD
     @IBOutlet weak var backButton: UIButton!
 //    
 //    var levelValue: Int?
@@ -24,14 +25,14 @@ class Quiz: UIViewController {
 //    var quizBrain = QuizBrain()
 //    
 //    
+=======
+
+    var levelValue: Int?
+    
+>>>>>>> parent of a241389 (Automatic scene switch after go back to game button clicked)
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    }
-    @IBAction func goBackToGame(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-        let refreshGame = Notification.Name(rawValue: refreshGame1)
-        NotificationCenter.default.post(name: refreshGame, object: nil)
     }
     
 }
