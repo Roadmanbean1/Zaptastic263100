@@ -77,6 +77,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iof-tL-H2t">
                                 <rect key="frame" x="0.0" y="44" width="76" height="29"/>
@@ -93,6 +94,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+=======
+>>>>>>> parent of a241389 (Automatic scene switch after go back to game button clicked)
 =======
 >>>>>>> parent of a241389 (Automatic scene switch after go back to game button clicked)
                         <viewLayoutGuide key="safeArea" id="r3I-bB-jPe"/>
@@ -116,6 +119,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oS9-Xg-jnk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1821.7391304347827" y="529.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YSo-To-hp9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kBO-tl-MWf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uin-yD-GRa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sWN-2f-w5d">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zSe-mV-tQI" kind="relationship" relationship="rootViewController" id="gem-3Q-PE1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9I-kg-1ii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024.6376811594205" y="-282.58928571428572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YSo-To-hp9">

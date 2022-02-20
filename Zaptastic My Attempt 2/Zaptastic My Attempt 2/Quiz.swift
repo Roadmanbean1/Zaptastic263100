@@ -9,6 +9,7 @@ import UIKit
 
 class Quiz: UIViewController {
 <<<<<<< HEAD
+<<<<<<< HEAD
     @IBOutlet weak var backButton: UIButton!
 //    
 //    var levelValue: Int?
@@ -26,6 +27,8 @@ class Quiz: UIViewController {
 //    
 //    
 =======
+=======
+>>>>>>> parent of a241389 (Automatic scene switch after go back to game button clicked)
 
     var levelValue: Int?
     
